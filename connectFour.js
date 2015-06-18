@@ -33,8 +33,14 @@ function checkForWin(){
 function checkHorizontal(){
 
 }
-
+function checkColor(){
+  if
+}
 function checkVertical(){
+  var previousCell = $(this);
+  var color = previousCell.checkColor();
+  var currentCell = $(this).next();
+  while currentCell.hasClass === '.active'
 
 }
 function checkDiagonalLeft(){
