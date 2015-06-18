@@ -1,10 +1,6 @@
 $(function(){
-
-  game = new TicTacToe();
-
-  game.render('.tic-tac-toe');
-
-
+  game = new ConnectFour();
+  game.render('.connect-four');
 });
 
 
