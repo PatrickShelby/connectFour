@@ -70,7 +70,7 @@ var clickGravity = function(e){
   }
 
  var clickJar = function(e){
-   alert("The mess maker is Da House");
+   alert("The mess maker is in Da House");
    $('.empty').css('background-image', 'url(jar.jpg)')
   }
 
