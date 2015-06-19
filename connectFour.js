@@ -38,7 +38,11 @@ var checkVertical= function(column){
     currentCell = previousCell.next()
     }
   if (counter === 4){
-    console.log("true")
+    alert(color + " Wins ! ! !")
+    $('h1').text(color + " Wins ! ! !")
+    $('.board').css('background-color', 'transparent')
+    $('div').css('background-color', 'transparent')
+    $('body').css('background-image', 'url(WJ.jpg)')
     callConnectFour();
   } else {
     console.log("false")
