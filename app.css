@@ -14,6 +14,7 @@
         line-height:120px;
         text-align:center;
         background:beige;
+        opacity:0.8;
         }
 
 .board {
@@ -39,6 +40,7 @@
         animation-duration: 2s;
         animation-iteration-count: 1;
         background-image:url('hunter.jpg');
+        opacity:1;
         }
 
 .red   { width:120px;
@@ -52,6 +54,7 @@
         animation-duration: 2s;
         animation-iteration-count: 1;
         background-image:url('brick.jpg');
+        opacity:1;
         }
 
 h1 {
@@ -64,6 +67,39 @@ h1 {
 body{
   background-image:url('wallpaper.jpg');
 }
+
+
+button {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #6dbff2);
+  background-image: -moz-linear-gradient(top, #3498db, #6dbff2);
+  background-image: -ms-linear-gradient(top, #3498db, #6dbff2);
+  background-image: -o-linear-gradient(top, #3498db, #6dbff2);
+  background-image: linear-gradient(to bottom, #3498db, #6dbff2);
+  -webkit-border-radius: 30;
+  -moz-border-radius: 30;
+  border-radius: 30px;
+  text-shadow: 20px 6px 0px #666666;
+  font-family: Courier New;
+  font-weight: bold;
+  color: #ff7dff;
+  font-size: 43px;
+  padding: 8px 40px 12px 20px;
+  text-decoration: none;
+}
+
+button:hover {
+  background: #8096a3;
+  background-image: -webkit-linear-gradient(top, #8096a3, #3498db);
+  background-image: -moz-linear-gradient(top, #8096a3, #3498db);
+  background-image: -ms-linear-gradient(top, #8096a3, #3498db);
+  background-image: -o-linear-gradient(top, #8096a3, #3498db);
+  background-image: linear-gradient(to bottom, #8096a3, #3498db);
+  text-decoration: none;
+}
+
+/*
+
 
 
 #titles
@@ -113,11 +149,22 @@ body{
 .gravity > .star {
     visibility: visible;
 }
-
+*/
 .normality {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.reality {
+.gravity {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.jar{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
