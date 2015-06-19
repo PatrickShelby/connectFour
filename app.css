@@ -1,29 +1,39 @@
-.tic-tac-toe-game{
-  /*border: 1px solid red;*/
-  /*display: flex;*/
-  /*width: 300px;*/
-  display: inline-block;
-}
+.column { border: 1px solid black;
+          width: 100px;
+          height: 600px;
+          display: inline-block;
+          margin:-2px;
+          }
 
-.c{
-  display: flex;
-}
 
-.tic-tac-toe-square{
-  height: 100px;
-  width: 100px;
-  border: 1px solid black;
-  font-size: 42px;
-  text-align: center;
-  line-height: 100px;
-}
+.empty { width:100px;
+        height:100px;
+        border-radius:50px;
+        font-size:20px;color:#fff;
+        line-height:100px;
+        text-align:center;
+        background:white;
+        }
 
-.template{
-  display: none;
-}
+.board {
+        width: 740px;
+        height: 600px;
+        }
 
-/* for debugging */
-/*
-*{
-  outline: 1px dotted red;
-}*/
+.black { width:100px;
+        height:100px;
+        border-radius:50px;
+        font-size:20px;color:#fff;
+        line-height:100px;
+        text-align:center;
+        background:black;
+        }
+
+.red   { width:100px;
+        height:100px;
+        border-radius:50px;
+        font-size:20px;color:#fff;
+        line-height:100px;
+        text-align:center;
+        background:red;
+        }
