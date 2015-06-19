@@ -15,13 +15,13 @@
 // });
 
 
-$(function(){
-  gravity = 'last'
-  color = 'red'
-$('.column').on('click', function(e){
-  $(this).find('> .empty:' + gravity).removeClass('empty').addClass(color)
-color = color === 'red' ? 'black' : 'red'
-  });
+// $(function(){
+//   gravity = 'last'
+//   color = 'red'
+// $('.column').on('click', function(e){
+//   $(this).find('> .empty:' + gravity).removeClass('empty').addClass(color)
+// color = color === 'red' ? 'black' : 'red'
+//   });
 
 $(".gravity").on('click', function(e){
    gravity = 'first'
