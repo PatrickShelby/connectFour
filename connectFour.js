@@ -1,5 +1,6 @@
 $( document ).ready(function() {
    color = 'red';
+   gravity = 'last'
     eventBindings();
 });
 
@@ -10,12 +11,15 @@ var eventBindings = function() {
     addPiece(column);
     checkVertical(column);
   });
+  $('.gravity').on('click', clickGravity);
+  $('.normality').on('click', clickNormality);
+  $('.jar').on('click', clickJar);
 }
 
 var addPiece= function(column){
-  $(column).find('> .empty:last').removeClass('empty').addClass(color);
-  color = color === 'red' ? 'black' : 'red';
-}
+  $(column).find('> .empty:' + gravity).removeClass('empty').addClass(color)
+color = color === 'red' ? 'black' : 'red'
+  };
 
 var checkVertical= function(column){
   var counter = 1;
@@ -40,3 +44,34 @@ var checkVertical= function(column){
     console.log("false")
   }
 }
+
+var clickGravity = function(e){
+   gravity = 'first';
+   alert("You are deep in Foursome");
+   $('body').css('background-image', 'url(star-wars.jpg)')
+   $('.board').css('background-color', 'transparent')
+   // $('.empty').css('background-color', 'transparent')
+   // $('.empty').css('opacity', '0.35')
+   // $('.red').css('opacity', '1')
+   // $('.black').css('opacity', '1')
+   $('h1').text('May the force be with you!')
+   $('h1').css('color', 'white')
+  }
+
+  var clickNormality = function(e){
+   gravity = 'last'
+   alert("You are back to reality");
+   $('body').css('background-image', 'url(wallpaper.jpg)')
+    $('.board').css('background-color', 'pink')
+   $('.empty').css('background-color', 'beige')
+   $('h1').text('Welcome back to reality')
+   $('h1').css('color', 'purple')
+  // $('.empty').css('opacity', '0.8')
+  }
+
+ var clickJar = function(e){
+   alert("The mess maker is Da House");
+   $('.empty').css('background-image', 'url(jar.jpg)')
+  }
+
+
