@@ -30,7 +30,8 @@ $(".gravity").on('click', function(e){
 
    $('body').css('background-image', 'url(star-wars.jpg)')
    $('.board').css('background-color', 'transparent')
-   $('.empty').css('background-color', 'transparent')
+   // $('.empty').css('background-color', 'transparent')
+   $('.empty').css('opacity', '0.35')
    $('h1').text('May the force be with you!')
    $('h1').css('color', 'white')
 
