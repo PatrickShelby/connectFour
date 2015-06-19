@@ -16,10 +16,10 @@
 
 
 
-$(function(){
-  color = 'red'
-$('.column').on('click', function(e){
-  $(this).find('> .empty:last').removeClass('empty').addClass(color)
-color = color === 'red' ? 'black' : 'red'
-  });
-});
+// $(function(){
+//   color = 'red'
+// $('.column').on('click', function(e){
+//   $(this).find('> .empty:last').removeClass('empty').addClass(color)
+// color = color === 'red' ? 'black' : 'red'
+//   });
+// });

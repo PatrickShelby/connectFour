@@ -1,55 +1,33 @@
-/*
-psuedo-code methods
-1.
+$( document ).ready(function() {
+   color = 'red';
+    eventBindings();
+});
 
-*/
-
-// connectFour = function(){
-//       this.board =
-//            [null,null,null,null,null,null,null,
-//             null,null,null,null,null,null,null,
-//             null,null,null,null,null,null,null,
-//             null,null,null,null,null,null,null,
-//             null,null,null,null,null,null,null,
-//             null,null,null,null,null,null,null]
-
-//       this.currentPlayer = "red";
-// }
-
-var eventBindings = function () {
-  $(".cell").on("click", function (event) {
-    cell = $(this);
+var eventBindings = function() {
+  $('.column').on("click", function(event) {
+    var column = $(this);
     console.log("in click");
-    event.preventDefault();
-    checkVertical();
+    addPiece(column);
+    checkVertical(column);
   });
 }
-function turnHandler(){
+
+var addPiece= function(column){
+  $(column).find('> .empty:last').removeClass('empty').addClass(color);
+  color = color === 'red' ? 'black' : 'red';
 }
 
-function checkForWin(){
-  checkHorizontal();
-  checkVertical();
-  checkDiagonalRight();
-  checkDiagonalLeft();
-}
-
-function checkHorizontal(){
-
-}
-
-function callConnectFour(){
-}
-
-function checkVertical(){
+var checkVertical= function(column){
   var counter = 1;
   var color;
-  var previousCell = $(cell.parent()).find('.red').first()
+  var previousCell = $(column).children().not(".empty").first();
+  console.log(previousCell);
   if (previousCell.hasClass('red'))
-  {color =  "red"};
+  {color =  "red"}
   else if  (previousCell.hasClass('black'))
   {color =  "black"};
   var currentCell = previousCell.next();
+  console.log(currentCell);
   while (currentCell.hasClass(color)) {
     counter++;
     previousCell = currentCell;
@@ -62,14 +40,3 @@ function checkVertical(){
     console.log("false")
   }
 }
-
-function checkDiagonalLeft(){
-
-}
-function checkDiagonalRight(){
-
-}
-
-$(document).ready(function() {
-  eventBindings();
-});
