@@ -38,35 +38,31 @@ function checkHorizontal(){
 
 }
 
+function callConnectFour(){
+}
+
 function checkVertical(){
   var counter = 1;
   var color;
-    if (cell.hasClass('red')){
-    color =  "red";
-  }
-  else {
-    color =  "black";
-  }
-  var previousCell = $(cell).parent().children().hasClass(color).first();
-  console.log(previousCell);
+  var previousCell = $(cell.parent()).find('.red').first()
+  if (previousCell.hasClass('red'))
+  {color =  "red"};
+  else if  (previousCell.hasClass('black'))
+  {color =  "black"};
   var currentCell = previousCell.next();
-  console.log(currentCell);
   while (currentCell.hasClass(color)) {
-    console.log(counter);
-    console.log(previousCell);
     counter++;
     previousCell = currentCell;
     currentCell = previousCell.next()
-    console.log(currentCell)
     }
   if (counter === 4){
     console.log("true")
-    return true;
+    callConnectFour();
   } else {
     console.log("false")
-    return false;
   }
 }
+
 function checkDiagonalLeft(){
 
 }
